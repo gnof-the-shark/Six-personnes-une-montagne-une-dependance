@@ -28,14 +28,65 @@
         }
         .logo-container:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
         .logo-img { max-height: 40px; max-width: 100%; object-fit: contain; }
-        .insta-red { border-left: 4px solid #ff0000; }
-        .garmin-blue { border-left: 4px solid #007cc3; }
-        .team-card { background: white; padding: 1.5rem; border-radius: 1rem; border: 1px solid #e2e8f0; text-align: center; }
+        
+        .config-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            transition: background 0.3s ease;
+        }
+        .config-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .config-logo {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            flex-shrink: 0;
+            background: white;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        .team-card { 
+            background: white; 
+            padding: 1rem; 
+            border-radius: 0.75rem; 
+            border: 1px solid #e2e8f0; 
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .family-photo-small {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        .mini-partner-logo {
+            height: 20px;
+            width: auto;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        .team-card:hover .mini-partner-logo {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-    <header class="hero-bg h-[60vh] flex flex-col items-center justify-center text-center text-white px-6">
+    <!-- Hero : Présentation du Projet -->
+    <header class="hero-bg h-[50vh] flex flex-col items-center justify-center text-center text-white px-6">
         <span class="text-yellow-500 uppercase tracking-[0.3em] font-bold mb-4 italic text-sm md:text-base">Candidature Festival de Banff</span>
         <h1 class="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tighter leading-tight">Six personnes, une montagne, une dépendance</h1>
         <p class="text-lg md:text-xl max-w-3xl font-light leading-relaxed">
@@ -43,8 +94,9 @@
         </p>
     </header>
 
-<main class="max-w-6xl mx-auto py-16 px-6">
+    <main class="max-w-6xl mx-auto py-16 px-6">
         
+        <!-- Logos des Commanditaires avec liens -->
         <section class="mb-20 text-center">
             <h2 class="text-sm uppercase tracking-widest font-bold text-slate-400 mb-10">Partenaires officiels du projet</h2>
             <div class="flex flex-wrap justify-center gap-8 items-center">
@@ -63,85 +115,112 @@
             </div>
         </section>
 
+        <!-- Vision et Technique -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-24">
             <section>
                 <h2 class="text-3xl font-black mb-6 uppercase tracking-tight text-slate-900">L'Intention Créative</h2>
                 <div class="space-y-6 text-slate-700 leading-relaxed text-lg">
                     <p>
-                        Inspirés par des années de visionnement du festival de Banff, nous passons de l'envie à l'action. Notre projet documente une ascension familiale authentique où l'effort physique rencontre un défi logistique invraisemblable.
+                        Inspirés par des années de visionnement du festival de Banff, nous passons de l'envie à l'action. Notre projet documente une ascension familiale où le défi rencontre une dépendance.
                     </p>
                     <p class="border-l-4 border-yellow-500 pl-6 italic font-medium bg-yellow-50 py-4 rounded-r-lg">
-                        "L'objectif est de capturer l'effort physique pur juxtaposé à la logistique d'une ligne électrique continue jusqu'au sommet."
-                    </p>
-                </div>
-            </section>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-24">
-            <section>
-                <h2 class="text-3xl font-black mb-6 uppercase tracking-tight text-slate-900">L'Intention Créative</h2>
-                <div class="space-y-6 text-slate-700 leading-relaxed text-lg">
-                    <p>
-                        Inspirés par des années de visionnement du festival de Banff, nous passons de l'envie à l'action. Notre projet documente une ascension familiale authentique où l'effort physique rencontre un défi logistique invraisemblable.
-                    </p>
-                    <p class="border-l-4 border-yellow-500 pl-6 italic font-medium bg-yellow-50 py-4 rounded-r-lg">
-                        "L'objectif est de capturer l'effort physique pur juxtaposé à la logistique d'une ligne électrique continue jusqu'au sommet."
+                        "L'objectif est d'apporter une touche d'humour dans ce festival en jumelant activité de plein air et une dépendance assumée."
                     </p>
                 </div>
             </section>
 
             <section class="bg-slate-900 p-8 rounded-2xl shadow-2xl text-white">
                 <h3 class="text-xl font-bold mb-6 text-yellow-500 uppercase tracking-wide">Configuration de Tournage</h3>
-                <div class="space-y-8">
-                    <div class="insta-red pl-4">
-                        <p class="font-bold">Insta360</p>
-                        <p class="text-sm text-slate-400 mt-1 text-balance">Capture des perspectives immersives pour documenter le déroulement des rallonges dans les sentiers.</p>
+                <div class="space-y-4">
+                    <!-- Insta360 -->
+                    <div class="config-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Insta360logo.jpg" alt="Insta360" class="config-logo">
+                        <div>
+                            <p class="font-bold text-white uppercase text-sm tracking-wide">Insta360</p>
+                            <p class="text-sm text-slate-400 mt-1">Capture des perspectives immersives pour documenter le déroulement des rallonges dans les sentiers.</p>
+                        </div>
                     </div>
-                    <div class="garmin-blue pl-4">
-                        <p class="font-bold">Garmin</p>
-                        <p class="text-sm text-slate-400 mt-1 text-balance">Suivi des données biométriques lors de la montée et de l'adrénaline au moment du sommet.</p>
+                    <!-- Garmin -->
+                    <div class="config-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Garmin_logo_2006.svg" alt="Garmin" class="config-logo">
+                        <div>
+                            <p class="font-bold text-white uppercase text-sm tracking-wide">Garmin</p>
+                            <p class="text-sm text-slate-400 mt-1">Suivi des données biométriques lors de la montée et de l'adrénaline au moment du sommet.</p>
+                        </div>
                     </div>
-                    <div class="border-l-4 border-white pl-4 text-balance">
-                        <p class="font-bold">Nespresso</p>
-                        <p class="text-sm text-slate-400 mt-1">Le moteur de l'expédition : un café de qualité professionnelle à plus de 712m d'altitude (c'est 713m d'altitude).</p>
+                    <!-- Nespresso -->
+                    <div class="config-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Monogramme_Nespresso.png" alt="Nespresso" class="config-logo">
+                        <div>
+                            <p class="font-bold text-white uppercase text-sm tracking-wide">Nespresso</p>
+                            <p class="text-sm text-slate-400 mt-1">Le moteur de l'expédition : un café de qualité professionnelle à plus de 712m d'altitude (C'est 713m d'altitude).</p>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
 
+        <!-- Section Créateurs : Famille Auger-White -->
         <section class="border-t border-slate-200 pt-16">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-black uppercase mb-2">Les Créateurs</h2>
                 <p class="text-slate-500 font-medium">L'équipe de réalisation : La Famille Auger-White</p>
             </div>
             
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                <div class="team-card shadow-sm">
-                    <p class="font-bold text-slate-900">Florent</p>
-                    <p class="text-xs text-slate-400 uppercase">White</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-1">
+                    <img src="https://raw.githubusercontent.com/gnof-the-shark/Six-personnes-une-montagne-une-dependance/1890a39a768ebad353a11776d0033cfa3c4d6b90/image/photo_famille.jpg" 
+                         alt="La Famille Auger-White" 
+                         class="family-photo-small">
                 </div>
-                <div class="team-card shadow-sm">
-                    <p class="font-bold text-slate-900">Julianne</p>
-                    <p class="text-xs text-slate-400 uppercase">White</p>
-                </div>
-                <div class="team-card shadow-sm">
-                    <p class="font-bold text-slate-900">Christophe</p>
-                    <p class="text-xs text-slate-400 uppercase">White</p>
-                </div>
-                <div class="team-card shadow-sm">
-                    <p class="font-bold text-slate-900">Martin</p>
-                    <p class="text-xs text-slate-400 uppercase">White</p>
-                </div>
-                <div class="team-card shadow-sm">
-                    <p class="font-bold text-slate-900">Félix</p>
-                    <p class="text-xs text-slate-400 uppercase">White</p>
-                </div>
-                <div class="team-card shadow-sm">
-                    <p class="font-bold text-slate-900">Marie-Noël</p>
-                    <p class="text-xs text-slate-400 uppercase">Auger</p>
+
+                <div class="md:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    <div class="team-card shadow-sm">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Insta360logo.jpg" alt="Insta360" class="mini-partner-logo">
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Florent</p>
+                            <p class="text-[10px] text-slate-400 uppercase">White</p>
+                        </div>
+                    </div>
+                    <div class="team-card shadow-sm">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Monogramme_Nespresso.png" alt="Nespresso" class="mini-partner-logo">
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Julianne</p>
+                            <p class="text-[10px] text-slate-400 uppercase">White</p>
+                        </div>
+                    </div>
+                    <div class="team-card shadow-sm">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Garmin_logo_2006.svg" alt="Garmin" class="mini-partner-logo">
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Christophe</p>
+                            <p class="text-[10px] text-slate-400 uppercase">White</p>
+                        </div>
+                    </div>
+                    <div class="team-card shadow-sm">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Monogramme_Nespresso.png" alt="Nespresso" class="mini-partner-logo">
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Martin</p>
+                            <p class="text-[10px] text-slate-400 uppercase">White</p>
+                        </div>
+                    </div>
+                    <div class="team-card shadow-sm">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Insta360logo.jpg" alt="Insta360" class="mini-partner-logo">
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Félix</p>
+                            <p class="text-[10px] text-slate-400 uppercase">White</p>
+                        </div>
+                    </div>
+                    <div class="team-card shadow-sm border-slate-300">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Monogramme_Nespresso.png" alt="Nespresso" class="mini-partner-logo">
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Marie-Noël</p>
+                            <p class="text-[10px] text-slate-400 uppercase">Auger</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <p class="text-center mt-10 text-slate-400 text-sm italic">
+            <p class="text-center mt-12 text-slate-400 text-sm italic">
                 Un projet familial né d'une passion commune pour le grand air et le cinéma d'aventure.
             </p>
         </section>
