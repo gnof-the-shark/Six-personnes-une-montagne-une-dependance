@@ -3,98 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation Projet Film | Festival de Banff</title>
+    <title>Projet Banff | Six personnes, une montagne, une dépendance</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
         .hero-bg { 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=1920'); 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1920'); 
             background-size: cover; 
             background-position: center; 
         }
-        .accent-border { border-left: 4px solid #eab308; }
+        .logo-container { 
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            width: 200px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        .logo-container:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+        .logo-img { max-height: 40px; max-width: 100%; object-fit: contain; }
+        .insta-red { border-left: 4px solid #ff0000; }
+        .garmin-blue { border-left: 4px solid #007cc3; }
+        .team-card { background: white; padding: 1.5rem; border-radius: 1rem; border: 1px solid #e2e8f0; text-align: center; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-    <header class="hero-bg h-[70vh] flex flex-col items-center justify-center text-center text-white px-6">
-        <span class="text-yellow-500 uppercase tracking-[0.3em] font-bold mb-4">Projet Cinématographique</span>
-        <h1 class="text-4xl md:text-6xl font-black mb-6 uppercase">Six personnes, une montagne, une dépendance</h1>
+    <header class="hero-bg h-[60vh] flex flex-col items-center justify-center text-center text-white px-6">
+        <span class="text-yellow-500 uppercase tracking-[0.3em] font-bold mb-4 italic text-sm md:text-base">Candidature Festival de Banff</span>
+        <h1 class="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tighter leading-tight">Six personnes, une montagne, une dépendance</h1>
         <p class="text-lg md:text-xl max-w-3xl font-light leading-relaxed">
-            Un projet né d'une passion de longue date pour le Festival de film de Banff, 
-            mélangeant l'aventure humaine, l'absurde et la quête du café parfait au sommet du monde.
+            Une expédition cinématographique où la performance technique rencontre l'humour absurde d'une famille passionnée.
         </p>
     </header>
 
-    <main class="max-w-5xl mx-auto py-20 px-6">
+    <main class="max-w-6xl mx-auto py-16 px-6">
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-            
+        <section class="mb-20 text-center">
+            <h2 class="text-sm uppercase tracking-widest font-bold text-slate-400 mb-10">Partenaires officiels du projet</h2>
+            <div class="flex flex-wrap justify-center gap-8 items-center">
+                <div class="logo-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Nespresso_logo_%28monogram_%2B_wordmark%29.svg" alt="Logo Nespresso" class="logo-img">
+                </div>
+                <div class="logo-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Garmin_logo_2006.svg/960px-Garmin_logo_2006.svg.png" alt="Logo Garmin" class="logo-img">
+                </div>
+                <div class="logo-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Insta360%27s_logo%28transparent%29.pdf/page1-4010px-Insta360%27s_logo%28transparent%29.pdf.jpg" alt="Logo Insta360" class="logo-img">
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-24">
             <section>
-                <h2 class="text-3xl font-black mb-6 uppercase tracking-tight">L'Intention du Projet</h2>
-                <div class="space-y-6 text-slate-700 leading-relaxed">
+                <h2 class="text-3xl font-black mb-6 uppercase tracking-tight text-slate-900">L'Intention Créative</h2>
+                <div class="space-y-6 text-slate-700 leading-relaxed text-lg">
                     <p>
-                        Notre projet vise à capturer l'essence même de l'esprit du festival : le dépassement de soi, mais avec un clin d'œil humoristique à nos dépendances modernes. Après des années à être spectateurs, nous passons de l'autre côté de la caméra.
+                        Inspirés par des années de visionnement du festival de Banff, nous passons de l'envie à l'action. Notre projet documente une ascension familiale authentique où l'effort physique rencontre un défi logistique invraisemblable.
                     </p>
-                    <p class="accent-border pl-6 italic">
-                        "Nous voulons démontrer que l'aventure n'est pas seulement une question de muscles et de sommets, mais aussi de persévérance face à l'absurdité technique."
-                    </p>
-                    <p>
-                        Le film documente une ascension familiale authentique au [NOM DU MONT] [cite: 9], où l'effort physique rencontre le défi logistique invraisemblable de transporter une source d'énergie domestique jusqu'au sommet[cite: 11, 15].
+                    <p class="border-l-4 border-yellow-500 pl-6 italic font-medium bg-yellow-50 py-4 rounded-r-lg">
+                        "L'objectif est de capturer l'effort physique pur juxtaposé à la logistique d'une ligne électrique continue jusqu'au sommet."
                     </p>
                 </div>
             </section>
 
-            <section class="bg-white p-8 rounded-2xl shadow-xl shadow-slate-200/60">
-                <h3 class="text-xl font-bold mb-4 text-slate-800">Aperçu du Concept</h3>
-                <p class="text-slate-600 mb-6 text-sm">
-                    Le film suit une famille de six personnes [cite: 1] tentant l'impossible : préparer un café Nespresso professionnel à plus de [ALTITUDE] mètres, en utilisant uniquement des rallonges électriques reliées à leur domicile[cite: 8, 14].
-                </p>
-                
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </div>
-                        <div>
-                            <p class="font-bold">Ton du film</p>
-                            <p class="text-sm text-slate-500">Documentaire d'aventure teinté d'humour absurde.</p>
-                        </div>
+            <section class="bg-slate-900 p-8 rounded-2xl shadow-2xl text-white">
+                <h3 class="text-xl font-bold mb-6 text-yellow-500 uppercase tracking-wide">Configuration de Tournage</h3>
+                <div class="space-y-8">
+                    <div class="insta-red pl-4">
+                        <p class="font-bold">Insta360</p>
+                        <p class="text-sm text-slate-400 mt-1 text-balance">Capture des perspectives immersives pour documenter le déroulement des rallonges dans les sentiers.</p>
                     </div>
-
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                        </div>
-                        <div>
-                            <p class="font-bold">Protagonistes</p>
-                            <p class="text-sm text-slate-500">Une famille unie par une mission... et une addiction au café[cite: 19].</p>
-                        </div>
+                    <div class="garmin-blue pl-4">
+                        <p class="font-bold">Garmin</p>
+                        <p class="text-sm text-slate-400 mt-1 text-balance">Suivi des données biométriques lors de la montée et de l'adrénaline au moment du sommet.</p>
+                    </div>
+                    <div class="border-l-4 border-white pl-4 text-balance">
+                        <p class="font-bold">Nespresso</p>
+                        <p class="text-sm text-slate-400 mt-1">Le moteur de l'expédition : un café de qualité professionnelle à plus de 2000m d'altitude.</p>
                     </div>
                 </div>
             </section>
         </div>
 
-        <section class="mt-24 text-center">
-            <h2 class="text-2xl font-bold mb-8">Partenaires du Projet</h2>
-            <div class="flex flex-wrap justify-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all">
-                <span class="text-xl font-black italic">NESPRESSO</span>
-                <span class="text-xl font-black italic">[VOTRE CAMÉRA]</span>
-                <span class="text-xl font-black italic">[VOTRE BATTERIE]</span>
+        <section class="border-t border-slate-200 pt-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black uppercase mb-2">Les Créateurs</h2>
+                <p class="text-slate-500 font-medium">L'équipe de réalisation : La Famille Auger-White</p>
             </div>
-            <div class="mt-12">
-                <a href="#" class="inline-block bg-slate-900 text-white px-10 py-4 rounded-full font-bold hover:bg-yellow-500 transition-colors uppercase tracking-widest text-sm">
-                    Soutenir le projet
-                </a>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="team-card shadow-sm">
+                    <p class="font-bold text-slate-900">Florent</p>
+                    <p class="text-xs text-slate-400 uppercase">White</p>
+                </div>
+                <div class="team-card shadow-sm">
+                    <p class="font-bold text-slate-900">Julianne</p>
+                    <p class="text-xs text-slate-400 uppercase">White</p>
+                </div>
+                <div class="team-card shadow-sm">
+                    <p class="font-bold text-slate-900">Christophe</p>
+                    <p class="text-xs text-slate-400 uppercase">White</p>
+                </div>
+                <div class="team-card shadow-sm">
+                    <p class="font-bold text-slate-900">Martin</p>
+                    <p class="text-xs text-slate-400 uppercase">White</p>
+                </div>
+                <div class="team-card shadow-sm">
+                    <p class="font-bold text-slate-900">Félix</p>
+                    <p class="text-xs text-slate-400 uppercase">White</p>
+                </div>
+                <div class="team-card shadow-sm">
+                    <p class="font-bold text-slate-900">Marie-Noël</p>
+                    <p class="text-xs text-slate-400 uppercase">Auger</p>
+                </div>
             </div>
+            
+            <p class="text-center mt-10 text-slate-400 text-sm italic">
+                Un projet familial né d'une passion commune pour le grand air et le cinéma d'aventure.
+            </p>
         </section>
 
     </main>
 
-    <footer class="border-t border-slate-200 py-12 text-center text-slate-400 text-xs uppercase tracking-widest">
-        &copy; 2026 Production Indépendante - Festival de Banff 
+    <footer class="py-12 text-center text-slate-400 text-xs uppercase tracking-[0.2em] border-t border-slate-100 mt-10">
+        &copy; 2026 Projet Film Banff | Famille Auger-White
     </footer>
 
 </body>
